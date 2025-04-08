@@ -109,7 +109,7 @@ span {
     border: 2px solid var(--cor-terciaria); 
 }
 
-.apresentacao__links__link:hover {
+.apresentacao__links__navegacao:hover {
     border-color: var(--cor-hover);
     animation: crescer 0.3s ease-out forwards;
 }
