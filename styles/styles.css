@@ -4,7 +4,7 @@
     --cor-principal: #242325;
     --cor-secundaria: white;
     --cor-terciaria: #9EB25D;
-    --cor-quaternaria: #59C9A5;
+    --cor-hover: #59C9A5;
     --black: black;
 
     --font-primaria: "Krona One", sans-serif;
@@ -34,13 +34,13 @@ body {
 .cabecalho__menu__link {
     font-family: var(--font-secundaria);
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--cor-terciaria);
     text-decoration: none;
 }
 
 .cabecalho__menu__link:hover {
-    color: var(--cor-quaternaria);
+    color: var(--cor-hover);
     animation: crescer 0.3s ease-out forwards;
 }
 
@@ -49,27 +49,23 @@ span {
     color: var(--cor-terciaria);
 }
 
-.imagem {
-    box-sizing: border-box;
-    border-radius: 16px;
-}
-
 .apresentacao {
-    padding: 8% 15%;
+    padding: 7% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 
 .apresentacao__conteudo {
-    width: 593px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36;
+    font-size: 2.25rem;
     font-family: var(--font-primaria);
 }
 
@@ -78,7 +74,7 @@ span {
 }
 
 .apresentacao__conteudo__texto {
-    font-size: 24;
+    font-size: 1.5rem;
     font-family: var(--font-secundaria);
 }
 
@@ -93,18 +89,18 @@ span {
 .apresentacao__links__titulo {
     font-family: var(--font-primaria);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
-.apresentacao__links__link {
+.apresentacao__links__navegacao {
     display: flex;
     justify-content: center;
     gap: 16px;
-    width: 378px;
+    width: 50%;
     padding: 21.5px 0;
     border-radius: 8px;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--font-secundaria);
     font-weight: 600;
     color: var(--cor-secundaria);
@@ -114,7 +110,7 @@ span {
 }
 
 .apresentacao__links__link:hover {
-    border-color: var(--cor-quaternaria);
+    border-color: var(--cor-hover);
     animation: crescer 0.3s ease-out forwards;
 }
 
@@ -128,13 +124,19 @@ span {
     }
   }
 
+  .apresentacao__imagem {
+    width: 50%;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
 .rodape {
     padding: 24px;
     color: var(--black);
     background-color: var(--cor-terciaria);
     text-align: center;
     font-family: var(--font-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -143,3 +145,21 @@ span {
     
 }
 
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;   
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
